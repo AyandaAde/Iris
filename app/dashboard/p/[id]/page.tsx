@@ -10,9 +10,7 @@ function PostPage({ params: { id } }: { params: { id: string } }) {
             <Suspense fallback={<SinglePostSkeleton />}>
                 <SinglePost id={id} />
             </Suspense>
-
             <Separator className="my-12 max-w-3xl lg:max-w-4xl mx-auto" />
-
             <Suspense>
                 <MorePosts postId={id} />
             </Suspense>

@@ -45,7 +45,7 @@ async function ProfileLayout({ children, params: { username } }: Props) {
     return (
         <>
             <ProfileHeader username={profile.username} />
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-7xl mx-auto">
                 <div className="flex gap-x-5 md:gap-x-10 px-4">
                     <ProfileAvatar user={profile}>
                         <UserAvatar
@@ -53,10 +53,9 @@ async function ProfileLayout({ children, params: { username } }: Props) {
                             className="w-20 h-20 md:w-36 md:h-36 cursor-pointer"
                         />
                     </ProfileAvatar>
-
                     <div className="md:px-10 space-y-4">
                         <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-3">
-                            <p className="font-semibold text-xl">{profile.username}</p>
+                            <p className="font-semibold text-xl mr-[20px]">{profile.username}</p>
                             {isCurrentUser ? (
                                 <>
                                     <Button
@@ -144,22 +143,9 @@ async function ProfileLayout({ children, params: { username } }: Props) {
                                 href={`/dashboard/${profile.username}/following`}
                                 className="font-medium"
                             >
-                                {profile.following.length === 1 ?
-                                    (
-                                        <>
-                                            <strong>
-                                                {profile.following.length}
-                                            </strong> following
-                                        </>
-                                    )
-                                    : (
-                                        <>
-                                            <strong>
-                                                {profile.following.length}
-                                            </strong> following
-                                        </>
-                                    )
-                                }
+                                <strong>
+                                    {profile.following.length}
+                                </strong> following
                             </Link>
                         </div>
                         <div className="text-sm">

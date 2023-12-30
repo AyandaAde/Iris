@@ -7,12 +7,10 @@ function ProfileHeader({ username }: { username: string | null }) {
             <Button size={"icon"} variant={"ghost"}>
                 <Settings />
             </Button>
-
             <div className="flex items-center gap-x-2 mx-auto">
                 <p className="font-bold">{username}</p>
                 <ChevronDown />
             </div>
-
             <Button size={"icon"} variant={"ghost"}>
                 <UserPlus />
             </Button>

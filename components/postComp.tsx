@@ -33,9 +33,6 @@ async function Post({ post }: { post: PostWithExtras }) {
                             </span>
                             <Timestamp createdAt={post.createdAt} />
                         </p>
-                        <p className="text-xs text-black dark:text-white font-medium">
-                            Harare, Zimbabwe
-                        </p>
                     </div>
                 </div>
 
