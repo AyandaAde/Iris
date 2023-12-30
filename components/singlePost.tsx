@@ -1,7 +1,7 @@
 import { auth } from "@/auth";
 import Comment from "./comment";
 import CommentForm from "./commentForm";
-import Post from "./post";
+import Post from "./postComp";
 import PostActions from "./postActions";
 import PostOptions from "./postOptions";
 import UserAvatar from "./userAvatar";
@@ -17,6 +17,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Card } from "./ui/card";
 import MiniPost from "./miniPost";
+
 
 async function SinglePost({ id }: { id: string }) {
     const post = await fetchPostById(id);

@@ -1,5 +1,5 @@
 import { fetchPostById, fetchPostsByUsername } from "@/lib/data";
-import Link from "next/Link";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import PostsGrid from "./postsGrid";
 
