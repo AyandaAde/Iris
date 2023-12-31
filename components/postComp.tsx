@@ -20,19 +20,23 @@ async function Post({ post }: { post: PostWithExtras }) {
         <div className="flex flex-col space-y-2.5">
             <div className="flex items-center justify-between px-3 sm:px-0">
                 <div className="flex space-x-3 items-center">
-                    <UserAvatar user={post.user} />
+                    <Link href={`/dashboard/${username}`}>
+                        <UserAvatar user={post.user} />
+                    </Link>
                     <div className="text-sm">
-                        <p className="space-x-1">
-                            <span className="font-semibold">{username}</span>
-                            <span
-                                className="font-medium text-neutral-500 dark:text-neutral-400
+                        <Link href={`/dashboard/${username}`}>
+                            <p className="space-x-1">
+                                <span className="font-semibold">{username}</span>
+                                <span
+                                    className="font-medium text-neutral-500 dark:text-neutral-400
                       text-xs
                     "
-                            >
-                                •
-                            </span>
-                            <Timestamp createdAt={post.createdAt} />
-                        </p>
+                                >
+                                    •
+                                </span>
+                                <Timestamp createdAt={post.createdAt} />
+                            </p>
+                        </Link>
                     </div>
                 </div>
 
