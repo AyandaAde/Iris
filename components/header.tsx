@@ -16,7 +16,7 @@ function Header() {
                 </p>
             </Link>
             <Link href={"/dashboard"} className="block sm:hidden">
-                <p className={`font-semiboold text-xl mr-[5px] ${calSans.className}`}>
+                <p className={`font-semiboold text-xl mr-[10px] ${calSans.className}`}>
                     Iris
                 </p>
             </Link>
