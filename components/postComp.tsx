@@ -51,18 +51,15 @@ async function Post({ post }: { post: PostWithExtras }) {
                     className="sm:rounded-md object-cover"
                 />
             </Card>
-
             <PostActions post={post} userId={userId} className="px-3 sm:px-0" />
-
             {post.caption && (
-                <div className="text-sm leading-none flex items-center space-x-2 font-medium px-3 sm:px-0">
+                <div className="text-sm leading-none flex items-start space-x-2 font-medium px-3 sm:px-0">
                     <Link href={`/dashboard/${username}`} className="font-bold">
                         {username}
                     </Link>
                     <p>{post.caption}</p>
                 </div>
             )}
-
             <Comments postId={post.id} comments={post.comments} user={session.user} />
         </div>
     );
